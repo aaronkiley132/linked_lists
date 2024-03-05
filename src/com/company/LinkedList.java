@@ -36,7 +36,7 @@ public class LinkedList {
         ListNode newNode = new ListNode(value);
         // start at the head and step through nodes to the end
         ListNode n = getHead();
-        while(n.next != null){
+        while(n!= null && n.next != null){
             n = n.next;
         }
         // add the new node at this position

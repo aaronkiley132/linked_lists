@@ -2,6 +2,7 @@ package com.company;
 
 public class LinkedList {
     private ListNode head;
+    private ListNode current;
 
     public LinkedList(int[] values) {
         ListNode n = new ListNode(values[0]);
@@ -44,19 +45,22 @@ public class LinkedList {
     }
 
     public void resetNext(){
-        //TODO start at the begining of the list
+        //resets current to the begining of the list
+        current = getHead();
     }
 
     public boolean hasNext(){
         boolean result  = true;
-        //TODO true if there is another item in the list
+        //true if there is another item in the list
+        if (current.next == null){
+            result = false;
+        }
         return result;
     }
 
     public ListNode getNext(){
-        ListNode result;
-        //TODO retrieves an element (the next one) from the list
-        return result;
+        //retrieves an element (the next one) from the list
+        return current.next;
     }
 
     public boolean isEmpty(){

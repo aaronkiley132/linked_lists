@@ -72,4 +72,71 @@ public class LinkedList {
         }
         return result;
     }
+
+    public void reverse(){
+        ListNode n = getHead();
+        ListNode m = getHead();
+        ListNode x = new ListNode(0);
+        m = m.next;
+        //find the number of nodes
+        int nodes = 0;
+        while (n != null){
+            nodes++;
+            n = n.next;
+        }
+        System.out.println(nodes);
+        n = getHead();
+        //iterate through all items decreasing by one each time
+        for(int k = 0; k < nodes; k++){
+        for (int i = 0; i < nodes - 1; i++){
+            for (int j = 0; j < nodes - (i + 1); j++){
+                //swap the pointers (n.next)
+                x.next = m.next;
+                m.next = n.next;
+                n.next = x.next;
+            }if (m.next != null && n.next != null){
+            m = m.next;
+            n = n.next;
+            }
+        }
+    }
+    }
+
+    public void cheatReverse(){
+        //create new LinkedList
+        //add items in reverse order
+
+        LinkedList output = new LinkedList(null);
+        ListNode n = getHead();
+        //find the number of nodes
+        int nodes = 0;
+        while (n != null){
+            nodes++;
+            n = n.next;
+        }n = getHead();
+
+
+    }
+
+    public void reverseList() {
+        //count nodes
+        ListNode n = getHead();
+        //find the number of nodes
+        int nodes = 0;
+        while (n != null){
+            nodes++;
+            n = n.next;
+        }n = getHead();
+        //for all nodes
+        for (int i = 0; i < nodes; i++){
+            ListNode previous = null;
+            ListNode current = n;
+         while (current != null) {
+                ListNode nextElement = current.next;
+                current.next = previous;
+                previous = current;
+                current = nextElement;
+            }n = n.next;
+        }
+    }
 }

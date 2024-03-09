@@ -8,6 +8,8 @@ public class Main {
         System.out.println(list1);
         list1.addItem(99);
         System.out.println(list1);
+        list1.reverseList();
+        System.out.println(list1);
 
     }
 }

@@ -101,12 +101,8 @@ public class LinkedList {
         }
         //swap last and head finally
         n = getHead();
-        x = n;
+        m.data = n.data;
         head.data = m.data;
         head.next = n.next;
-        m.data = x.data;
-        //m.next = x.next;
-       // System.out.println(head);
-
     }
 }

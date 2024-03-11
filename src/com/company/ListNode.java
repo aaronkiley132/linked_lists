@@ -8,4 +8,8 @@ public class ListNode {
         data = d;
         next = null;
     }
+
+    public String toString(){
+        return data + "" + next;
+    }
 }

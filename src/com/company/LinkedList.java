@@ -105,4 +105,8 @@ public class LinkedList {
         head.data = m.data;
         head.next = n.next;
     }
+
+    public void setHead(ListNode n){
+        head = n;
+    }
 }

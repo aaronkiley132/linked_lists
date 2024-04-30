@@ -11,5 +11,15 @@ public class Main {
         list1.reverse();
         System.out.println(list1);
 
+
+        Stack list2 = new Stack(data, 10);
+        System.out.println(list2);
+        list2.push(99);
+        System.out.println(list2);
+        list2.pop();
+        System.out.println(list2);
+        list2.peek();
+        System.out.println(list2);
+
     }
 }

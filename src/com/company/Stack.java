@@ -1,12 +1,11 @@
 package com.company;
 
-public class Stack {
+public class Stack extends LinkedList{
 
-    LinkedList stack;
     int sizeLimit;
 
     public Stack(int[] data, int limit){
-        this.stack = new LinkedList(data);
+        super(data);
         this.sizeLimit = limit;
     }
 
@@ -15,25 +14,21 @@ public class Stack {
         //create new listNode for n
         ListNode newStackItem = new ListNode(n);
         //set pointer of n to head
-        newStackItem.next = stack.getHead();
+        newStackItem.next = this.getHead();
         //set head to n
-        stack.setHead(newStackItem);
+        this.setHead(newStackItem);
     }
 
     //returns the last element pushed to the stack
     ListNode peek(){
-        return stack.getHead();
+        return this.getHead();
     }
 
     //removes the top element / most recently pushed from the stack
     ListNode pop(){
-        ListNode toPop = stack.getHead();
-        stack.setHead(toPop.next);
+        ListNode toPop = this.getHead();
+        this.setHead(toPop.next);
         return toPop;
-    }
-
-    boolean isEmpty(){
-        return stack.isEmpty();
     }
 
     boolean isFull(){
@@ -46,7 +41,7 @@ public class Stack {
     int size(){
         int size = 0;
         if (isEmpty() == false) {
-            ListNode current = stack.getHead();
+            ListNode current = this.getHead();
             while (current != null){
                 size++;
             } return size;

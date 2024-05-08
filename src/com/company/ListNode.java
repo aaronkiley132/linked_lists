@@ -10,6 +10,6 @@ public class ListNode {
     }
 
     public String toString(){
-        return data + "" + next;
+        return data + " " + next.data;
     }
 }
